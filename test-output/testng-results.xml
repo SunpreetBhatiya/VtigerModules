@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-25T11:21:12 IST" name="Default suite" finished-at="2024-01-25T11:22:22 IST" duration-ms="70204">
+    <groups>
+    </groups>
+    <test started-at="2024-01-25T11:21:12 IST" name="Default test" finished-at="2024-01-25T11:22:22 IST" duration-ms="70204">
+      <class name="CommonUtils.BaseClass">
+        <test-method is-config="true" signature="BS()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:12 IST" name="BS" finished-at="2024-01-25T11:21:12 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BS -->
+        <test-method is-config="true" signature="BC()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:12 IST" name="BC" finished-at="2024-01-25T11:21:16 IST" duration-ms="3684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BC -->
+        <test-method is-config="true" signature="BM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:16 IST" name="BM" finished-at="2024-01-25T11:21:18 IST" duration-ms="2259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BM -->
+        <test-method signature="LeadTest()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:18 IST" name="LeadTest" finished-at="2024-01-25T11:21:26 IST" duration-ms="7921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LeadTest -->
+        <test-method is-config="true" signature="AM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:26 IST" name="AM" finished-at="2024-01-25T11:21:27 IST" duration-ms="1194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AM -->
+        <test-method is-config="true" signature="BM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:27 IST" name="BM" finished-at="2024-01-25T11:21:29 IST" duration-ms="2166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BM -->
+        <test-method signature="contactTest()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:29 IST" name="contactTest" finished-at="2024-01-25T11:21:53 IST" duration-ms="23797" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactTest -->
+        <test-method is-config="true" signature="AM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:53 IST" name="AM" finished-at="2024-01-25T11:21:55 IST" duration-ms="1212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AM -->
+        <test-method is-config="true" signature="BM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:55 IST" name="BM" finished-at="2024-01-25T11:21:57 IST" duration-ms="2093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BM -->
+        <test-method signature="organisationTest()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:57 IST" name="organisationTest" finished-at="2024-01-25T11:22:21 IST" duration-ms="24109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- organisationTest -->
+        <test-method is-config="true" signature="AM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:22:21 IST" name="AM" finished-at="2024-01-25T11:22:22 IST" duration-ms="1326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AM -->
+        <test-method is-config="true" signature="AC()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:22:22 IST" name="AC" finished-at="2024-01-25T11:22:22 IST" duration-ms="385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AC -->
+        <test-method is-config="true" signature="AS()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:22:22 IST" name="AS" finished-at="2024-01-25T11:22:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AS -->
+      </class> <!-- CommonUtils.BaseClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
