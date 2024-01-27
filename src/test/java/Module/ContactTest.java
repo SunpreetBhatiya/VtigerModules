@@ -5,75 +5,33 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import CommonUtils.BaseClass;
 import CommonUtils.JavaUtils;
 import CommonUtils.PropertiesFileUtils;
 import CommonUtils.WebDriverutils;
 
-public class Contact {
+public class ContactTest extends BaseClass {
 	
+	WebDriver cd;
 	
-	public static void main(String[] args) throws InterruptedException, IOException {
-		
-	
-	   WebDriver cd;
-	
-	   PropertiesFileUtils utils = new PropertiesFileUtils();
-	   JavaUtils js = new JavaUtils();
-	   String Browser = utils.getdatafromPropertFile("browser");
-       
-       
-       
-    
-		//To launch the browser we are going to use
-		if(Browser.equalsIgnoreCase("Chrome"))
-		{
-			cd = new ChromeDriver();
-		}
-		else if(Browser.equalsIgnoreCase("Edge"))
-		{
-			cd = new EdgeDriver();
-		}
-		else
-		{
-			
-			cd = new FirefoxDriver();
-			System.out.println("DefaultBrowser");
-		}
-		
+	@Test
+	public void contactTest() throws InterruptedException, IOException
+	{
+		PropertiesFileUtils utils = new PropertiesFileUtils();
+		JavaUtils js = new JavaUtils();
 		WebDriverutils wd = new WebDriverutils();
-		wd.maximizeWindow(cd);
-		wd.waitWebElementToLoad(cd);
-		
-		
-		String urll = utils.getdatafromPropertFile("url");
-		String NAME = utils.getdatafromPropertFile("username");
-		String pass = utils.getdatafromPropertFile("password");
-		
-	
-		cd.get(urll);
-		Thread.sleep(2000);
-		
-		//Step 6 : Login to the application
-		cd.findElement(By.name("user_name")).sendKeys(NAME);
-		Thread.sleep(2000);
-		cd.findElement(By.name("user_password")).sendKeys(pass);
-		Thread.sleep(2000);
-		cd.findElement(By.id("submitButton")).click();
-		
 		cd.findElement(By.xpath("//a[text()='Contacts']")).click();
 		Thread.sleep(2000);
+		
 		
 		cd.findElement(By.cssSelector("img[alt='Create Contact...']")).click();
 		Thread.sleep(2000);
 		
 		cd.findElement(By.name("firstname")).sendKeys(utils.getdatafromPropertFile("fname")+js.getRandomNumber());
 		Thread.sleep(2000);
-		
-		
+		Assert.assertEquals("Pune", "pune");
 		
 		cd.findElement(By.name("lastname")).sendKeys(utils.getdatafromPropertFile("lname"));
 		Thread.sleep(2000);
@@ -144,17 +102,6 @@ public class Contact {
 		File temp = ts.getScreenshotAs(OutputType.FILE);
 		File destinationfile = new File("./screenshot/contact" + timedate + ".png");
 		FileUtils.copyFile(temp, destinationfile);*/
-		
-		
-		WebElement signout = cd.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
-		
-		wd.mousehover(cd, signout);
-		
-		cd.findElement(By.xpath("//a[text()='Sign Out']")).click();
 	}
 
-
-
 }
-
-

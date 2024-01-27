@@ -12,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -93,6 +94,7 @@ public class BaseClass {
 		cd.findElement(By.name("firstname")).sendKeys(utils.getdatafromPropertFile("fname")+js.getRandomNumber());
 		Thread.sleep(2000);
 		
+		
 		cd.findElement(By.name("lastname")).sendKeys(utils.getdatafromPropertFile("lname"));
 		Thread.sleep(2000);
 		
@@ -102,6 +104,7 @@ public class BaseClass {
 		WebElement dropdown = cd.findElement(By.name("assigned_group_id"));
 		wd.handleDropdown(dropdown,"Support Group");
 		Thread.sleep(2000);
+		Assert.assertEquals("pune", "Puna");
 		
 		cd.findElement(By.xpath("(//img[@alt='Select'])[1]")).click();
 		Thread.sleep(2000);
@@ -110,16 +113,9 @@ public class BaseClass {
 		
 		wd.Switch(cd, "http://localhost:8888/index.php?action=index&module=Home");
 		
-		/*Set<String> ids = cd.getWindowHandles();
-		System.out.println(ids);
 		
-		for(String e : ids)
-		{
-			String act = cd.switchTo().window(e).getCurrentUrl();
-			System.out.println(act);
-		}*/
 		
-     cd.findElement(By.id("search_txt")).sendKeys("Sunny1");
+        cd.findElement(By.id("search_txt")).sendKeys("Sunny1");
 		
 		cd.findElement(By.cssSelector("input[class='crmbutton small create']")).click();
 		
@@ -127,42 +123,14 @@ public class BaseClass {
 		
 		wd.Switch(cd, "http://localhost:8888/index.php?module=Contacts&action=EditView&return_action=DetailView&parenttab=Marketing");
 		
-		/*Set<String> ids1 = cd.getWindowHandles();
-		System.out.println(ids1);
 		
-		String parentturl = "http://localhost:8888/index.php?module=Contacts&action=EditView&return_action=DetailView&parenttab=Marketing";
-		
-		for(String e : ids1)
-		{
-			String act1 = cd.switchTo().window(e).getCurrentUrl();
-			System.out.println(act1);
-			
-			if(act1.contains(parentturl))
-			{
-				break;
-			}
-			
-		}*/
-		
-
-		
-		//cd.findElement(By.id("jscal_trigger_birthday")).sendKeys("2024-01-01");
 		
 		cd.findElement(By.cssSelector("input[class='crmbutton small save']")).click();
-		
 		wd.takeScreenShot(cd);
 		
-		//local date and time
-		/*LocalDateTime ldt=LocalDateTime.now();
-		String timedate = ldt.toString().replace(':', '-');
 		
-		//Take the sc
-		TakesScreenshot ts = (TakesScreenshot) cd;
-		
-		File temp = ts.getScreenshotAs(OutputType.FILE);
-		File destinationfile = new File("./screenshot/contact" + timedate + ".png");
-		FileUtils.copyFile(temp, destinationfile);*/
 	}
+	
 	
 	@Test
 	public void organisationTest() throws InterruptedException, IOException
@@ -185,6 +153,8 @@ public class BaseClass {
 		//Click on the radio button
 		
 		cd.findElement(By.xpath("(//input[@name='assigntype'])[2]")).click();
+		Assert.assertEquals("pune", "Puna");
+	
 		
 		
 		
@@ -234,6 +204,9 @@ public class BaseClass {
 		cd.findElement(By.cssSelector("input[name='firstname']")).sendKeys(utils.getdatafromPropertFile("fname")+js.getRandomNumber());
 		cd.findElement(By.name("lastname")).sendKeys(utils.getdatafromPropertFile("lname"));
 		cd.findElement(By.name("company")).sendKeys(utils.getdatafromPropertFile("company"));
+		Assert.assertEquals("pune", "Puna");
+		
+		
 		
 		cd.findElement(By.xpath("(//input[@name='assigntype'])[2]")).click();
 		
@@ -244,6 +217,7 @@ public class BaseClass {
 		cd.findElement(By.cssSelector("input[class='crmbutton small save']")).click();
 		
 	}
+	
 	
 	
 	

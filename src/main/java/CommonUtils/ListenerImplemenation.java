@@ -2,7 +2,6 @@ package CommonUtils;
 
 import java.io.IOException;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -22,7 +21,9 @@ public class ListenerImplemenation  implements ITestListener{
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
-		Reporter.log("Test Script is Started",true);		
+		String methodname=result.getMethod().getMethodName();
+		Reporter.log("Test Script is Started",true);
+		test=rp.createTest(methodname);
 		
 	}
 
@@ -38,14 +39,18 @@ public class ListenerImplemenation  implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
+		JavaUtils js = new JavaUtils();
 		String message = result.getThrowable().toString();
 		String methodname=result.getMethod().getMethodName();
 		//Reporter.log(methodname + "Test Script is Failed" + message,true);	
 		test.log(Status.FAIL, methodname + "Test Script is Failed");
+		String name = methodname + js.getRandomNumber();
 		test.log(Status.FAIL, result.getThrowable());
 		WebDriverutils utils = new WebDriverutils();
 		try {
-			utils.takeScreenShot1(BaseClass.sdriver, "Contact name");
+			
+			String path = utils.takeScreenShot1(BaseClass.sdriver, name);
+			test.addScreenCaptureFromPath(path);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,61 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Test Script is Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Script is Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Script is Started]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-01-25T11:21:12 IST" name="Default suite" finished-at="2024-01-25T11:22:22 IST" duration-ms="70204">
+  <suite started-at="2024-01-27T10:11:36 IST" name="Default suite" finished-at="2024-01-27T10:12:24 IST" duration-ms="47616">
     <groups>
     </groups>
-    <test started-at="2024-01-25T11:21:12 IST" name="Default test" finished-at="2024-01-25T11:22:22 IST" duration-ms="70204">
+    <test started-at="2024-01-27T10:11:36 IST" name="Default test" finished-at="2024-01-27T10:12:24 IST" duration-ms="47616">
       <class name="CommonUtils.BaseClass">
-        <test-method is-config="true" signature="BS()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:12 IST" name="BS" finished-at="2024-01-25T11:21:12 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="BS()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:11:36 IST" name="BS" finished-at="2024-01-27T10:11:36 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BS -->
-        <test-method is-config="true" signature="BC()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:12 IST" name="BC" finished-at="2024-01-25T11:21:16 IST" duration-ms="3684" status="PASS">
+        <test-method is-config="true" signature="BC()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:11:36 IST" name="BC" finished-at="2024-01-27T10:11:39 IST" duration-ms="3220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BC -->
-        <test-method is-config="true" signature="BM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:16 IST" name="BM" finished-at="2024-01-25T11:21:18 IST" duration-ms="2259" status="PASS">
+        <test-method is-config="true" signature="BM()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:11:39 IST" name="BM" finished-at="2024-01-27T10:11:42 IST" duration-ms="2255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BM -->
-        <test-method signature="LeadTest()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:18 IST" name="LeadTest" finished-at="2024-01-25T11:21:26 IST" duration-ms="7921" status="PASS">
+        <test-method signature="LeadTest()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:11:42 IST" name="LeadTest" finished-at="2024-01-27T10:11:47 IST" duration-ms="5155" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Puna] but found [pune]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Puna] but found [pune]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at CommonUtils.BaseClass.LeadTest(BaseClass.java:207)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[Test Script is Started]]>
+            </line>
           </reporter-output>
         </test-method> <!-- LeadTest -->
-        <test-method is-config="true" signature="AM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:26 IST" name="AM" finished-at="2024-01-25T11:21:27 IST" duration-ms="1194" status="PASS">
+        <test-method is-config="true" signature="AM()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:11:47 IST" name="AM" finished-at="2024-01-27T10:11:48 IST" duration-ms="1140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AM -->
-        <test-method is-config="true" signature="BM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:27 IST" name="BM" finished-at="2024-01-25T11:21:29 IST" duration-ms="2166" status="PASS">
+        <test-method is-config="true" signature="BM()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:11:48 IST" name="BM" finished-at="2024-01-27T10:11:50 IST" duration-ms="1819" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BM -->
-        <test-method signature="contactTest()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:29 IST" name="contactTest" finished-at="2024-01-25T11:21:53 IST" duration-ms="23797" status="PASS">
+        <test-method signature="contactTest()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:11:50 IST" name="contactTest" finished-at="2024-01-27T10:12:07 IST" duration-ms="17433" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Puna] but found [pune]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Puna] but found [pune]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at CommonUtils.BaseClass.contactTest(BaseClass.java:107)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[Test Script is Started]]>
+            </line>
           </reporter-output>
         </test-method> <!-- contactTest -->
-        <test-method is-config="true" signature="AM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:53 IST" name="AM" finished-at="2024-01-25T11:21:55 IST" duration-ms="1212" status="PASS">
+        <test-method is-config="true" signature="AM()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:12:08 IST" name="AM" finished-at="2024-01-27T10:12:09 IST" duration-ms="1429" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AM -->
-        <test-method is-config="true" signature="BM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:55 IST" name="BM" finished-at="2024-01-25T11:21:57 IST" duration-ms="2093" status="PASS">
+        <test-method is-config="true" signature="BM()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:12:09 IST" name="BM" finished-at="2024-01-27T10:12:11 IST" duration-ms="1774" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BM -->
-        <test-method signature="organisationTest()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:21:57 IST" name="organisationTest" finished-at="2024-01-25T11:22:21 IST" duration-ms="24109" status="PASS">
+        <test-method signature="organisationTest()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:12:11 IST" name="organisationTest" finished-at="2024-01-27T10:12:22 IST" duration-ms="11146" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Puna] but found [pune]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Puna] but found [pune]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at CommonUtils.BaseClass.organisationTest(BaseClass.java:156)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[Test Script is Started]]>
+            </line>
           </reporter-output>
         </test-method> <!-- organisationTest -->
-        <test-method is-config="true" signature="AM()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:22:21 IST" name="AM" finished-at="2024-01-25T11:22:22 IST" duration-ms="1326" status="PASS">
+        <test-method is-config="true" signature="AM()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:12:22 IST" name="AM" finished-at="2024-01-27T10:12:23 IST" duration-ms="1132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AM -->
-        <test-method is-config="true" signature="AC()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:22:22 IST" name="AC" finished-at="2024-01-25T11:22:22 IST" duration-ms="385" status="PASS">
+        <test-method is-config="true" signature="AC()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:12:23 IST" name="AC" finished-at="2024-01-27T10:12:24 IST" duration-ms="323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AC -->
-        <test-method is-config="true" signature="AS()[pri:0, instance:CommonUtils.BaseClass@4d5650ae]" started-at="2024-01-25T11:22:22 IST" name="AS" finished-at="2024-01-25T11:22:22 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AS()[pri:0, instance:CommonUtils.BaseClass@51c668e3]" started-at="2024-01-27T10:12:24 IST" name="AS" finished-at="2024-01-27T10:12:24 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AS -->

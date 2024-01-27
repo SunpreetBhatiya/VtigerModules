@@ -135,13 +135,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 		  public String takeScreenShot1(WebDriver cd,String Screenshotname) throws IOException
 			{
 				  LocalDateTime ldt=LocalDateTime.now();
-					String timedate = ldt.toString().replace(':', '-');
+				  String timedate = ldt.toString().replace(':', '-');
 					
 					//Take the sc
 					TakesScreenshot ts = (TakesScreenshot) cd;
 					
 					File temp = ts.getScreenshotAs(OutputType.FILE);
-					File destinationfile = new File("./screenshot/" + Screenshotname + "timedate" + ".png");
+					File destinationfile = new File("./screenshot/" + Screenshotname + timedate + ".png");
 					FileUtils.copyFile(temp, destinationfile);
 					return destinationfile.getAbsolutePath();
 					

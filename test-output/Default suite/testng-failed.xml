@@ -5,12 +5,14 @@
     <classes>
       <class name="CommonUtils.BaseClass">
         <methods>
+          <include name="organisationTest"/>
           <include name="AS"/>
           <include name="AC"/>
           <include name="LeadTest"/>
           <include name="BS"/>
           <include name="BC"/>
           <include name="AM"/>
+          <include name="contactTest"/>
           <include name="BM"/>
         </methods>
       </class> <!-- CommonUtils.BaseClass -->
